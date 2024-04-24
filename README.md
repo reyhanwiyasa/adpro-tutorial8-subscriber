@@ -17,3 +17,8 @@ Jawab:
 Foto:
 ![image](https://github.com/reyhanwiyasa/adpro-tutorial8-subscriber/assets/119433464/829e11d1-8567-4dc9-9c2f-5ea4e26ed88b)
 Pada gambar diatas dapat dilihat kalau pada suatu saat sempat terdapat 100 message pada queue. Ini terjadi karena subscriber memererlukan waktu yang lebih lama untuk menghandle tiap event yang berada di message queue. Hal ini menyebabkan terjadinya penumpukkan message karena publisher meng-publish message lebih cepat daripada subscriber membuat message.
+
+![image](https://github.com/reyhanwiyasa/adpro-tutorial8-subscriber/assets/119433464/6f891056-49f5-4877-abd7-78d2aa4a1120)
+Tiap subscriber berfungsi seperti aplikasi terpisah yang independent satu sama lain sehingga mereka mendapat data yang berbeda-beda ketika publisher mengirimkan banyak data ke message queue. Ketika data sudah terambil dari message queue, maka message akan hilang dan aplikasi lain tidak bisa menggunakannya.
+
+Salah satu cara untuk meningkatkan performa dari aplikasi subscriber adalah dengan membuatnya menjadi multithreading agar dapat mengolah banyak event dari publisher sekaligus.
