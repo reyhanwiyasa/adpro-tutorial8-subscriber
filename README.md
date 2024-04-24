@@ -12,4 +12,8 @@ Jawab:
 
 `guest` kedua: Password yang berhubungan dengan username
 
-`localhost:5672` : Menspefikasikan hostname atau IP address dan juga portnumber yang di-listen oleh AMQP service.
+`localhost:5672` : Menspesifikasikan hostname atau IP address dan juga portnumber yang di-listen oleh AMQP service.
+
+Foto:
+![image](https://github.com/reyhanwiyasa/adpro-tutorial8-subscriber/assets/119433464/829e11d1-8567-4dc9-9c2f-5ea4e26ed88b)
+Pada gambar diatas dapat dilihat kalau pada suatu saat sempat terdapat 100 message pada queue. Ini terjadi karena subscriber memererlukan waktu yang lebih lama untuk menghandle tiap event yang berada di message queue. Hal ini menyebabkan terjadinya penumpukkan message karena publisher meng-publish message lebih cepat daripada subscriber membuat message.
